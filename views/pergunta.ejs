@@ -1,0 +1,44 @@
+<%- include ('partials/header.ejs') %>
+
+<body>
+    
+<%- include ('partials/navbar.ejs')%>
+
+    <div class="container">
+
+        <h1>Responder:</h1>
+        <br>
+
+        <div class="card">
+            <div class="card-header">
+                
+                <h1><%= pergunta %></h1>
+            </div>
+            <div class="card-body">
+                <h1><%= description %></h1>
+            </div>
+  
+            <div class="card-footer">
+                
+                <form action="/responder" method="post"></form>
+                
+                <label for="answer-field">Resposta:</label>
+                <textarea class= "form-control"name="answer-field" id="answer-field" cols="30" rows="5"></textarea>
+
+                
+            </div>
+    
+
+
+        </div>
+        
+    </div>
+
+
+
+</body>
+
+<%- include ('partials/footer.ejs') %>
+
+
+
