@@ -34,41 +34,39 @@ app.get('/perguntar', (req,res)=>{
 })
 
 
-app.get('/pergunta/:id', (req,res)=>{ //pergunta no exemplo
+app.get("/pergunta/:id", (req, res) => { //abrir uma pergunta específica ao ser clicada
     var id = req.params.id;
 
     Pergunta.findOne({
-        where: {id:id}
-    }).then(pergunta =>{
-        res.render('pergunta', {
-        pergunta: pergunta.title,
-        description: pergunta.description
+        where: {id: id}
+    }).then(pergunta => {
+
+        Resposta.findAll({
+            where: {perguntaId: pergunta.id},
+            order: [['id', 'DESC']]
+        }).then(resposta => {
+            res.render('pergunta', {pergunta: pergunta,
+                resposta: resposta
+        })
+
+        
+        })
+     
     })
+
+})
+
+
+app.post('/responder', (req,res)=>{
+    var perguntaId = req.body.pergunta;
+    var corpo = req.body.answer;
+
+    Resposta.create({
+        perguntaId: perguntaId,
+        corpo: corpo
+    }).then(()=>{
+        res.redirect('/pergunta/'+perguntaId)
     })
-
-
-
-    // Pergunta.findOne({
-    //     where: {id: id}
-    // }).then(pergunta => {
-    //     if(pergunta != undefined){
-    //         Resposta.findAll({
-    //             where: {perguntaId: pergunta.id},
-    //             order: [['id', 'DESC']]
-
-    //         }).then(resposta => {
-    //             res.render("/responder",{
-    //                 pergunta: pergunta,
-    //                 resposta: resposta
-    //             })
-    //         })
-    //     }else{
-    //         res.redirect("/")
-    //     }
-
-    // })
-    
-    
 })
 
 

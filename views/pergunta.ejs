@@ -12,23 +12,40 @@
         <div class="card">
             <div class="card-header">
                 
-                <h1><%= pergunta %></h1>
+                <h2><%= pergunta.title %></h2>
             </div>
             <div class="card-body">
-                <h1><%= description %></h1>
+                <h5><%= pergunta.description %></h5>
             </div>
   
             <div class="card-footer">
                 
-                <form action="/responder" method="post"></form>
+                <form action="/responder" method="post">
                 
                 <label for="answer-field">Resposta:</label>
-                <textarea class= "form-control"name="answer-field" id="answer-field" cols="30" rows="5"></textarea>
-
-                
+                <textarea class= "form-control"name="answer" id="answer-field" cols="30" rows="3"></textarea>
+                    <button type="submit" class="btn btn-success">Responder</button>
+                    <input type="hidden" name="pergunta" value="<%= pergunta.id%>">
+            </form>
             </div>
-    
+            <hr>
+        <h3>Respostas</h3>
+        <hr> 
+        <% resposta.forEach(resposta =>{ %>
+            
+            <div class="card">
+                <div class="card-body">
+                     <p><%=resposta.corpo %></p>
+                </div>
+            </div>
+            
+            
 
+            <br>
+        <% }) %>
+            
+            
+   
 
         </div>
         
