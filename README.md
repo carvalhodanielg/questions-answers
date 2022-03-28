@@ -25,4 +25,4 @@ https://user-images.githubusercontent.com/100332887/160502007-e5a4b484-90d1-4ecc
 
 
 
-In order to properly run this application you need to run `npm install` and make the changes in the file 'database.js', according with the local database settings.  
+In order to properly run this application you need to run `npm install` and make the changes in the file 'public-database.js', according with the local database settings.  
