@@ -4,6 +4,7 @@
 
 body{
     background-color: #FAFAFA;
+    overflow-x: hidden;
 }
 
 #nav-image{
@@ -19,6 +20,7 @@ body{
 .footer{
     width: 100vw;
     background-color: cornflowerblue;
+    background-color: rgb(52, 58, 64);
     display: flex;
     text-align: center;
     height: 40px;
