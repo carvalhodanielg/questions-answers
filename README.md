@@ -6,7 +6,7 @@ Evereyy question shows the number of answers it received and every answer keep t
 
 The application was developed with support of Node.js; Express.js; EJS; bootstrap and MySQL. 
 
-Here is some of screenshots and a video of the app in use.
+Here is some of screenshots and a video of the app in use..
 
 
 
