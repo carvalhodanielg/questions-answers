@@ -21,19 +21,20 @@
             <div class="card-body">
                 <h5><%= pergunta.description %></h5>
             </div>
-  
-            <div class="card-footer">
+        </div> 
+            <div class="card-body">
                 
                 <form action="/responder" method="post">
                 
                 <label for="answer-field">Your Answer:</label>
                 <textarea class= "form-control"name="answer" id="answer-field" cols="30" rows="3"></textarea>
-                    <button type="submit" class="btn btn-success">Submit</button>
+                <br>    
+                <button type="submit" class="btn btn-success">Submit</button>
                     <input type="hidden" name="pergunta" value="<%= pergunta.id%>">
             </form>
             </div>
 
-        </div>    
+           
 
         <h3 id="title-text" class="answer-title">Answers:</h3>
         <hr>
