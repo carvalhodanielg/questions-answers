@@ -1,7 +1,8 @@
 <%- include ('partials/header.ejs')%>
 
 <body>
-    <%- include ('partials/navbar.ejs')%>
+
+<%- include ('partials/navbar.ejs')%>
 
     <div class="title-index">
         <h1 id="title-text">Make your question or answer someone's</h1>
@@ -14,15 +15,11 @@
         <br>
 
         <% perguntas.forEach(pergunta => {%>
-
-        
-
+    
         <div class = "card"   >
 
             <div class="card-body">
-
                 <a href="/pergunta/<%=pergunta.id%>"><h1 id="subtitle-text"><%=pergunta.title%></h1></a>
-
             </div>
 
             <div class="card-footer">
@@ -31,12 +28,10 @@
            
         </div>
         <br>
+
         <% })%>
            
     </div>
-    
-    
-
 
 </body>
 

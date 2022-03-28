@@ -31,8 +31,6 @@ body{
     margin-top: 10px;
     color: white;
     height: 40px;
- 
-    
 }
 
 #question-button{
@@ -54,7 +52,6 @@ body{
     font-weight: 500;
 }
 
-
 #subtitle-text{
 font-weight: 300;
 }
@@ -66,4 +63,13 @@ font-weight: 300;
 
 .card-body a{
     color: black;
+}
+
+.total-answers{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    font-size: .9rem;
 }
